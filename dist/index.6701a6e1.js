@@ -25541,7 +25541,7 @@ function LoginView(props) {
                     lineNumber: 29
                 },
                 __self: this,
-                children: "Signup"
+                children: "Signup here"
             })
         ]
     }));
