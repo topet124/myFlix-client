@@ -1,0 +1,20 @@
+$backgroundColor: #020402;
+$textColor: #f1fffa;
+$mainColor: #e5383b;
+
+* {
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+#login-view {
+  border-color: $textColor;
+  border-width: 10px;
+  min-height: 300px;
+  border: solid 2px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10%;
+  width: 50%;
+  box-shadow: 10px 5px 5px grey;
+ 
+}
