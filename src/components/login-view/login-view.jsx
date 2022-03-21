@@ -1,21 +1,30 @@
+import axios from 'axios'
 import React, { useState } from 'react';
 import './login-view.scss';
 import PropTypes from "prop-types";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+;
 
 
 export function LoginView(props) {
-  const [ username, setUsername ] = useState('');
-  const [ password, setPassword ] = useState('');
+  const [ Username, setUsername ] = useState('');
+  const [ Password, setPassword ] = useState('');
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(username, password);
-    /* Send a request to the server for authentication */
-    /* then call props.onLoggedIn(username) */
-    props.onLoggedIn(username);
-  };
+      e.preventDefault();
+      /* Send a request to the server for authentication */
+      axios.post(`https://myflix39.herokuapp.com/login?Username=${Username}&Password=${Password}`,
+        )
+      .then(response => {
+        const data = response.data;
+        props.onLoggedIn(data);
+      })
+      .catch(e => {
+        console.log('no such user')
+      });
+    };
+
 
   return (
      <Form id="login-view">
@@ -28,7 +37,7 @@ export function LoginView(props) {
         <Form.Label>Password:</Form.Label>
         <Form.Control type="password" onChange={e => setPassword(e.target.value)} />
       </Form.Group>
-      <Button variant="primary" type="submit" onClick={handleSubmit}>
+      <Button variant="primary" type="button" onClick={handleSubmit}>
         Submit
       </Button>
         <button type="button" >Signup here</button>

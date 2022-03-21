@@ -11,7 +11,7 @@ export class MovieCard extends React.Component{
 
         return (
       <Card id="movie-card">
-         <Card.Img variant="top" src={movie.imagePath}/>
+         <Card.Img variant="top" src={movie.imagepath}/>
         <Card.Body>
           <Card.Title >{movie.title}</Card.Title>
           <Card.Text>{movie.description}</Card.Text>
