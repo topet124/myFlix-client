@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import { Col, Row,Nav } from "react-bootstrap";
+import { Col, Row,Button } from "react-bootstrap";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import './main-view.scss';
 
@@ -76,10 +77,18 @@ function is invoked and updates the state of the `selectedMovie`
     localStorage.setItem('user', authData.user.Username);
     this.getMovies(authData.token);
 }
+onLoggedOut() {
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
+  this.setState({
+    user: null
+  });
+}
 
 
   render() {
   const { movies, selectedMovie, user, register } = this.state;
+
 
   if (!register) return (<RegistrationView onRegistration={(register) => this.onRegistration(register)}/>);
 
@@ -97,6 +106,11 @@ function is invoked and updates the state of the `selectedMovie`
 
   return (
     <div className="main-view">
+
+      <Button variant="primary" type="button" onClick={() => { this.onLoggedOut() }}>
+        logout
+      </Button>
+      
 
       {/*If the state of `selectedMovie` is not null, that 
       selected movie will be returned otherwise, all *movies

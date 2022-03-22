@@ -4,7 +4,7 @@ import './login-view.scss';
 import PropTypes from "prop-types";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-;
+
 
 
 export function LoginView(props) {
