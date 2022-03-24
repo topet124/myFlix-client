@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { Form, Button, Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
 import { Link, Router } from "react-router-dom";
 
-
 import './registration-view.scss';
 
 export function RegistrationView(props) {
