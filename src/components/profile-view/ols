@@ -1,0 +1,56 @@
+ return (  
+           
+                       <Container className="mt-5">
+                <Row>
+                    <Col xs={12} sm={6} >
+                        <Card bg="dark" text="light">
+                            <Card.Header>Your Information</Card.Header>
+                            <Card.Body>
+                                <UserInfo
+                                    name={Username}
+                                    email={Email}
+                                    birthday={Birthday}
+                                />
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col className="mb-3" xs={12} sm={6} >
+                        <Card bg="dark" text="light">
+                            <Card.Header>Update Your Information</Card.Header>
+
+                            <Card.Body>
+                                <UpdateUser
+                                    user={this.state}
+                                    handleUpdate={(user) => this.handleUpdate(user)}
+                                    setUsername={(value) => this.setUsername(value)}
+                                    setPassword={(value) => this.setPassword(value)}
+                                    setEmail={(value) => this.setEmail(value)}
+                                    setBirthday={(value) => this.setBirthday(value)}
+                                />
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Card bg="dark" text="light">
+                            <FavoriteMovies
+                                favoriteMovies={FavoriteMovies}
+                                removeFavorite={(item) => this.removeFavorite(item)}
+                                selectedFavorite={(e) => this.selectedFavorite(e)}
+                                movies={movies}
+                            />
+                        </Card>
+                    </Col>
+                </Row>
+                <div className="text-center">
+                    <p variant="light">Hit the button below to delete account.</p>
+                    <Button variant="danger" onClick={(e) => this.deleteUser(e)}>
+                        Delete Your Account Profile
+                    </Button>
+                    <p variant="light">Note! deletion cannot be reversed.</p>
+                </div>
+            </Container >
+        
+      
+        );
