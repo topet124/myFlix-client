@@ -1,7 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import { Col, Row,Button } from "react-bootstrap";
+import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Redirect,Routes } from "react-router-dom";
+
+import { setMovies } from '../profile-view/actions';
 
 import './main-view.scss';
 
@@ -11,6 +14,8 @@ import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { NavbarView } from '../navbar-view/navbar-view';
 import { DirectorView } from '../director-view/director-view';
+import { GenreView } from '../genre-view/genre-view';
+import ProfileView from '../profile-view/profile-view';
 
 
 export class MainView extends React.Component {
@@ -162,26 +167,19 @@ onLoggedOut() {
 
       
 
-            <Route path="/genres/:name" render={({ match, history }) => {
-                 if (!user) return 
-                 <Col>
-                   <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
-                 </Col>
-               
-                if (movies.length === 0) return <div className="main-view" />;
-                 if ( !user ) 
-                 return (
-                   <Col>
-                     <LoginView onLoggedIn={ (user) => this.onLoggedIn(user) } />
-                   </Col>
-                 );
-              if (movies.length === 0) return <div className="main-view" />;
-              return <Col md={8}>
-                <GenreView Genre={movies.find((m) => m.Genre.Name === match.params.name).Genre} onBackClick={() => history.goBack()} />
-              </Col>
-            }
-            } />
-          {/*director view*/}
+            {/*genre view*/}
+               <Route path="/genres/:name" render={({ match, history }) => {
+                  if (!user) return <Col>
+                     <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
+                  </Col>
+                  if (movies.length === 0) return <div className="main-view" />;
+                  return <Col md={8}>
+                  <GenreView genre={movies.find(m => m.genre.name === match.params.name).genre}
+                        onBackClick={() => history.goBack()} />
+                  </Col>
+               }} />
+
+        {/*director view*/}
                <Route path="/director/:name" render={({ match, history }) => {
                   if (!user) return <Col>
                      <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
@@ -192,7 +190,25 @@ onLoggedOut() {
                      }
                         onBackClick={() => history.goBack()} />
                   </Col>
-               }} />
+               }} />  
+          {/*profile view*/}
+               <Route path={`/users/:user`} render={({ match, history }) => {
+                 
+                 if (!user) return <Col>
+                      <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
+                    </Col>
+                    if (movies.length === 0) return <div className="main-view" />;
+                    return <Col>
+                      <ProfileView
+                          movies={movies}
+                          movie={movies.find(m => m._id === match.params.movieId)}
+                          user={user === match.params.user}
+                          history={history}
+                          removeFavorite={(_id) => this.removeFavorite(_id)}
+                         selectedFavorite={(e) => this.selectedFavorite(e)} />
+                  </Col>
+                  
+               }  } />    
 
       
       </Row>
@@ -203,3 +219,9 @@ onLoggedOut() {
   );
 }
 }
+
+let mapStateToProps = state => { //map component state to props for store through connect()
+   return { movies: state.movies }
+}
+
+export default connect(mapStateToProps, { setMovies })(MainView); 

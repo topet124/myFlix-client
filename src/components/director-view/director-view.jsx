@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './director-view.scss';
-import {Container, Card, Button, Row} from 'react-bootstrap';
+import {Container, Card, Button, Row, Col} from 'react-bootstrap';
 
 export function DirectorView({ director, onBackClick }) {
     console.log(director)

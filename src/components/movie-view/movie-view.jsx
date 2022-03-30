@@ -20,7 +20,7 @@ export class MovieView extends React.Component {
                                 {movie.description}</Card.Text>
                              <Card.Text id="movie-director" className="movie-director">
                                 Director: {movie.director.name} </Card.Text>
-                                <Link to={`director/${movie.director.name}`}>
+                                <Link to={`/director/${movie.director.name}`}>
                                  <Button variant="link">Director</Button>
                                  </Link>
                               <Card.Text id="movie-genre" className="movie-gerne">
@@ -40,10 +40,21 @@ export class MovieView extends React.Component {
 }
 
 MovieView.propTypes = {
-  movie: PropTypes.shape({
-    Title: PropTypes.string.isRequired,
-    Description: PropTypes.string.isRequired,
-    imagePath: PropTypes.string.isRequired
-    })
-    };
-    
+   movie: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      imagepath: PropTypes.string.isRequired,
+      genre: PropTypes.shape({
+         name: PropTypes.string.isRequired,
+         description: PropTypes.string.isRequired
+      }),
+      director: PropTypes.shape({
+         name: PropTypes.string.isRequired,
+         bio: PropTypes.string.isRequired,
+         birth: PropTypes.string
+      }),
+      actors: PropTypes.array,
+      releasedyear: PropTypes.string
+   }).isRequired,
+   onBackClick: PropTypes.func.isRequired
+};
