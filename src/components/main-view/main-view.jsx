@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Col, Row,Button } from "react-bootstrap";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect,Routes } from "react-router-dom";
 
 import './main-view.scss';
 
@@ -103,6 +103,7 @@ onLoggedOut() {
   <Router>
          <NavbarView user={user}/>   
     <div className="main-view">
+      
 
       {/*If the state of `selectedMovie` is not null, that 
       selected movie will be returned otherwise, all *movies
@@ -193,9 +194,9 @@ onLoggedOut() {
                   </Col>
                }} />
 
-
+      
       </Row>
-
+    
     </div>
   </Router>
    
