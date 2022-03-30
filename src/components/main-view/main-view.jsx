@@ -8,14 +8,11 @@ import { RegistrationView } from '../registration-view/registration-view';
 import { LoginView} from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
-<<<<<<< Updated upstream
-=======
 import { NavbarView } from '../navbar-view/navbar-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { ProfileView } from '../profile-view/profile-view';
 
->>>>>>> Stashed changes
 
 
 export class MainView extends React.Component {
@@ -92,26 +89,6 @@ function is invoked and updates the state of the `selectedMovie`
       selected movie will be returned otherwise, all *movies
        will be returned*/}
 
-<<<<<<< Updated upstream
-      {selectedMovie
-      ? (
-        <Row>
-          <Col md={8}>
-             <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
-          </Col>
-        </Row>
-        )
-          : (
-        <Row className="justify-content-md-center">
-          {movies.map(movie => (
-           <Col md={4}>
-              <MovieCard key={movie._id} movie={movie} onMovieClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
-            </Col> 
-          ))}
-        </Row>
-      )
-        }
-=======
       <Row className="main-view justify-content-md-center">
           <Route exact path="/" render={() => {
               if (!user) return <Col>
@@ -210,7 +187,6 @@ function is invoked and updates the state of the `selectedMovie`
                }  } />
       </Row>
 
->>>>>>> Stashed changes
     </div>
   );
 }
