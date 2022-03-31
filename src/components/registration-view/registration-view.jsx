@@ -124,7 +124,7 @@ const handleSubmit = (e) => {
                                         <Form.Group>
                                             <Form.Label>Birthdate:</Form.Label>
                                             <Form.Control 
-                                            type="date" 
+                                            type="isDate" 
                                             value={Birthdate} 
                                             onChange={e => setBirthdate(e.target.value)} 
                                             required

@@ -4,8 +4,7 @@ import { UserInfo } from './user-info';
 import { FavoriteMovie } from './favorite-movies';
 import { UpdateUser } from './update-user';
 import { Container, Row, Col, Card, Alert, Button } from 'react-bootstrap';
-import { connect } from 'react-redux';
-import { setUser, updateUser } from './actions';
+import PropTypes from 'prop-types';
 
 export class ProfileView extends React.Component {
     constructor() {
@@ -181,6 +180,9 @@ getUser = (token) => {
                        <Row>
                     <Col>
                         <Card bg="dark" text="light">
+                            {FavoriteMovies.length === 0 && (
+                                <div className="text-center">No Favorite Movies</div>
+                            )}
                             <FavoriteMovie
                                 favoriteMovies={FavoriteMovies}
                                 removeFavorite={(item) => this.removeFavorite(item)}
@@ -204,11 +206,4 @@ getUser = (token) => {
     }
 }
 
-let mapStateToProps = state => {
-    return {
-        user: state.user,
-        movies: state.movies
-    }
-}
 
-export default connect(mapStateToProps, { setUser, updateUser })(ProfileView);
