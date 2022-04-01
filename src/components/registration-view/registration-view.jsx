@@ -58,7 +58,7 @@ const handleSubmit = (e) => {
           Username: Username,
           Password: Password,
           Email: Email,
-          Birthdate: Birthdate
+          Birthday: Birthdate
         })
         .then(response => {
           const data = response.data;
@@ -80,67 +80,67 @@ const handleSubmit = (e) => {
   return (
  
       <CardGroup>
-                        <Card id="regi-view" >
-                            <Card.Body>
-                                <Card.Title>Please register</Card.Title>
-                                    <Form id="registration-view">
-                                        <Form.Group>
-                                            <Form.Label>Username</Form.Label>
-                                            <Form.Control
-                                                type="text"
-                                                value={Username}
-                                                onChange={e => setUsername(e.target.value)} 
-                                                required 
-                                                placeholder="Enter a username"/>
-                                            {/* code added here to display validation error */}
-                                            {UsernameErr && <p>{UsernameErr}</p>}
-                                        
-                                        </Form.Group>
-                                        
-                                        <Form.Group>
-                                            <Form.Label>Password</Form.Label>
-                                            <Form.Control 
-                                                type="password"
-                                                value={Password}
-                                                onChange={e => setPassword(e.target.value)} 
-                                                required
-                                                placeholder="Enter a Password"
-                                                minLength="8" 
-                                            />
-                                            {/* code added here to display validation error */}
-                                            {PasswordErr && <p>{PasswordErr}</p>}
-                                        </Form.Group>
+                <Card id="regi-view" >
+                    <Card.Body>
+                        <Card.Title>Please register</Card.Title>
+                            <Form id="registration-view">
+                                <Form.Group>
+                                    <Form.Label>Username</Form.Label>
+                                    <Form.Control
+                                        type="text"
+                                        value={Username}
+                                        onChange={e => setUsername(e.target.value)} 
+                                        required 
+                                        placeholder="Enter a username"/>
+                                    {/* code added here to display validation error */}
+                                    {UsernameErr && <p>{UsernameErr}</p>}
+                                
+                                </Form.Group>
+                                
+                                <Form.Group>
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control 
+                                        type="password"
+                                        value={Password}
+                                        onChange={e => setPassword(e.target.value)} 
+                                        required
+                                        placeholder="Enter a Password"
+                                        minLength="8" 
+                                    />
+                                    {/* code added here to display validation error */}
+                                    {PasswordErr && <p>{PasswordErr}</p>}
+                                </Form.Group>
 
-                                        <Form.Group>
-                                            <Form.Label>Email</Form.Label>
-                                            <Form.Control 
-                                                type="email"
-                                                value={Email}
-                                                onChange={e => setEmail(e.target.value)} 
-                                                required
-                                                placeholder="Enter your email adress" />
-                                                {EmailErr && <p>{EmailErr}</p>}
-                                        </Form.Group>
-                                        <Form.Group>
-                                            <Form.Label>Birthdate:</Form.Label>
-                                            <Form.Control 
-                                            type="isDate" 
-                                            value={Birthdate} 
-                                            onChange={e => setBirthdate(e.target.value)} 
-                                            required
-                                            placeholder="Enter your Birthdate"/>
-                                            {BirthdateErr && <p>{BirthdateErr}</p>}
-                                        </Form.Group>
+                                <Form.Group>
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control 
+                                        type="email"
+                                        value={Email}
+                                        onChange={e => setEmail(e.target.value)} 
+                                        required
+                                        placeholder="Enter your email adress" />
+                                        {EmailErr && <p>{EmailErr}</p>}
+                                </Form.Group>
+                                <Form.Group>
+                                    <Form.Label>Birthdate:</Form.Label>
+                                    <Form.Control 
+                                    type="date" 
+                                    value={Birthdate} 
+                                    onChange={e => setBirthdate(e.target.value)} 
+                                    required
+                                    placeholder="Enter your Birthdate"/>
+                                    {BirthdateErr && <p>{BirthdateErr}</p>}
+                                </Form.Group>
 
-                                        <Button variant="primary"
-                                            type="submit"
-                                            onClick={handleSubmit}>
-                                            Register
-                                        </Button>
-                                    </Form>
-                            </Card.Body>
-                        </Card>
-                    </CardGroup>
+                                <Button variant="primary"
+                                    type="submit"
+                                    onClick={handleSubmit}>
+                                    Register
+                                </Button>
+                            </Form>
+                    </Card.Body>
+                </Card>
+      </CardGroup>
       
   );
 }

@@ -33,11 +33,11 @@ export function NavbarView({ user }) {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <NavItem className="navlink">
+                        <Navbar.Text className="navlink">
                             {isAuth() && (
                                 <p>Welcome: <Link to={`/users/${user}`}><span className="user">{user}</span></Link></p>
                             )}
-                        </NavItem>
+                        </Navbar.Text>
                         <Nav.Link >
                             {isAuth() && (
                                 <button className="logout_button" size="md" variant="dark" text="light" onClick={() => { onLoggedOut() }} ><p>Logout</p></button>

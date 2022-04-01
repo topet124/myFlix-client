@@ -5,6 +5,7 @@ import { FavoriteMovie } from './favorite-movies';
 import { UpdateUser } from './update-user';
 import { Container, Row, Col, Card, Alert, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import  './profile-view.scss';
 
 export class ProfileView extends React.Component {
     constructor() {

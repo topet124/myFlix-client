@@ -52,9 +52,10 @@ export class UpdateUser extends React.Component {
                     />
                 </Form.Group>
                 <Form.Group className="mb-2">
+
                     <Form.Label>Birthday:</Form.Label>
                     <Form.Control
-                        type="isDate"
+                        type="date"
                         name="date"
                         defaultValue={user.Birthday}
                         onChange={(event) => this.setBirthday(event.target.value)}
