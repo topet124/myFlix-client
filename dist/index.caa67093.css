@@ -165,4 +165,13 @@ body {
 .fav-movies {
   min-height: 250px;
 }
+.visibility-filter {
+  width: 24.5%;
+  text-align: center;
+  position: relative;
+  left: 420px;
+  bottom: 43.5px;
+  border-radius: 10px;
+  background-color: white;
+}
 /*# sourceMappingURL=index.caa67093.css.map */
