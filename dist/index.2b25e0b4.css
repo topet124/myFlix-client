@@ -1,0 +1,170 @@
+* {
+  color: #fff;
+  background-color: #36454f;
+  font: 100% Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: League Spartan, sans-serif;
+}
+
+#registration-view {
+  min-height: 300px;
+  width: 50%;
+  border: 1px solid ;
+  border-radius: 10px;
+  margin-top: 10%;
+  padding: 20px;
+  box-shadow: 10px 5px 5px gray;
+}
+
+#regi-view {
+  min-height: 300px;
+  width: 50%;
+  background-color: #36454f;
+  border: 1px solid ;
+  border-radius: 50px;
+  margin-top: 10%;
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: League Spartan, sans-serif;
+}
+
+#login-view {
+  min-height: 300px;
+  width: 50%;
+  border: 2px solid ;
+  border-radius: 10px;
+  margin-top: 10%;
+  padding: 20px;
+  box-shadow: 10px 5px 5px gray;
+}
+
+:root {
+  --fontsize-card-title: 20px;
+  --fontweight-card-title: 600;
+  --fontsize-card-button: 15px;
+  --fontweight-card-button: 400;
+}
+
+body {
+  box-sizing: border-box;
+  color: #f1fffa;
+  background-color: #020402;
+  font-family: League Spartan, sans-serif;
+}
+
+#card-button {
+  color: #f1fffa;
+  border: 1px solid ;
+  border-radius: 5px;
+  margin: auto;
+  text-decoration: none;
+  transition: opacity .8s;
+}
+
+#movie-card {
+  text-align: center;
+  min-height: 500px;
+  max-height: 500px;
+  border-width: 10px;
+  border-color: #f1fffa;
+  margin-bottom: 50px;
+  overflow: scroll;
+}
+
+#card-title {
+  font-size: var(--fontsize-card-title);
+  font-weight: var(--fontweight-card-title);
+}
+
+#card-button {
+  font-size: var(--fontsize-card-button);
+  font-weight: var(--fontweight-card-button);
+}
+
+:root {
+  --fontsize-movie-title: 30px;
+  --fontweight-movie-title: 600;
+  --fontsize-movie-description: 20px;
+  --fontweight-movie-description: 400;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: League Spartan, sans-serif;
+}
+
+#movie-view {
+  min-height: 500px;
+  border: .5px solid ;
+  box-shadow: 10px 5px 5px gray;
+}
+
+#movie-view-image {
+  margin-bottom: 20px;
+}
+
+#movie-title {
+  text-align: center;
+  font-size: var(--fontsize-movie-title);
+  font-weight: var(--fontweight-movie-title);
+}
+
+#movie-description, #movie-director, #movie-genre {
+  font-size: var(--fontsize-movie-description);
+  font-weight: var(--fontweight-movie-description);
+}
+
+#movie-view-button {
+  color: #f1fffa;
+  background-color: #e5383b;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  margin-right: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #353535;
+  font-family: Montserrat, sans-serif;
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #353535;
+  font-family: Montserrat, sans-serif;
+}
+
+.genreview {
+  background: #000;
+}
+
+.fav-movies {
+  min-height: 250px;
+}
+
+.visibility-filter {
+  width: 24.5%;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  bottom: 43.5px;
+  left: 420px;
+}
+
+
+
+/*# sourceMappingURL=index.2b25e0b4.css.map */
