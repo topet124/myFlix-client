@@ -17,8 +17,9 @@
   "homepage": "https://github.com/topet124/myFlix-client#readme",
   "description": "",
   "dependencies": {
+    "@parcel/transformer-stylus": "^2.4.1",
     "axios": "^0.26.1",
-    "parcel": "^2.0.0-rc.0",
+    "parcel": "^2.0.0C-rc.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.2.1",
@@ -30,6 +31,7 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
+    "parcel-bundler": "^1.12.3",
     "prettier": "2.6.1"
   }
 }
