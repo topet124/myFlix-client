@@ -17,6 +17,7 @@
   "homepage": "https://github.com/topet124/myFlix-client#readme",
   "description": "",
   "dependencies": {
+    "@parcel/transformer-sass": "^2.4.1",
     "@parcel/transformer-stylus": "^2.4.1",
     "axios": "^0.26.1",
     "parcel": "^2.0.0C-rc.0",
