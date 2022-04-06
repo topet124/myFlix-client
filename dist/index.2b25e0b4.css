@@ -32,16 +32,24 @@
 * {
   box-sizing: border-box;
   font-family: League Spartan, sans-serif;
+  text-decoration: none;
 }
 
 #login-view {
-  min-height: 300px;
+  min-height: 500px;
+  max-width: 400px;
   width: 50%;
   border: 2px solid ;
   border-radius: 10px;
   margin-top: 10%;
   padding: 20px;
+  text-decoration: none;
   box-shadow: 10px 5px 5px gray;
+}
+
+.links :hover {
+  color: #000;
+  text-decoration: none;
 }
 
 :root {
@@ -156,11 +164,9 @@ body {
 }
 
 .visibility-filter {
-  width: 24.5%;
-  text-align: center;
+  width: 22%;
   background-color: #fff;
   border-radius: 10px;
-  position: relative;
   bottom: 43.5px;
   left: 420px;
 }

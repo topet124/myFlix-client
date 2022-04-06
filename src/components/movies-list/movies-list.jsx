@@ -14,7 +14,7 @@ function MoviesList(props) {
   const { movie, visibilityFilter } = props;
   let filteredMovies = movie;
 
-  if (visibilityFilter !== "") {
+  if (visibilityFilter !== " ") {
     filteredMovies = movie.filter((m) =>
       m.title.toLowerCase().includes(visibilityFilter.toLowerCase())
     );

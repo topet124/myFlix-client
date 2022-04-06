@@ -35233,6 +35233,7 @@ function LoginView(props) {
         id: "login-view",
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Group, {
+                className: "mb-3",
                 controlId: "formUsername",
                 children: [
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Form.Label, {
@@ -35292,7 +35293,7 @@ function LoginView(props) {
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                 to: "/register",
-                className: "login-Signup",
+                className: "links",
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Button, {
                     variant: "link",
                     type: "button",
@@ -35300,7 +35301,7 @@ function LoginView(props) {
                 }, void 0, false, {
                     fileName: "src/components/login-view/login-view.jsx",
                     lineNumber: 43,
-                    columnNumber: 55
+                    columnNumber: 48
                 }, this)
             }, void 0, false, {
                 fileName: "src/components/login-view/login-view.jsx",
@@ -36816,7 +36817,7 @@ const mapStateToProps = (state)=>{
 function MoviesList(props) {
     const { movie , visibilityFilter  } = props;
     let filteredMovies = movie;
-    if (visibilityFilter !== "") filteredMovies = movie.filter((m)=>m.title.toLowerCase().includes(visibilityFilter.toLowerCase())
+    if (visibilityFilter !== " ") filteredMovies = movie.filter((m)=>m.title.toLowerCase().includes(visibilityFilter.toLowerCase())
     );
     if (!movie) return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         className: "main-view"
@@ -36886,6 +36887,8 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRedux = require("react-redux");
 var _actions = require("../../actions/actions");
+var _form = require("react-bootstrap/Form");
+var _formDefault = parcelHelpers.interopDefault(_form);
 var _visibilityFilterScss = require("./visibility-filter.scss");
 function VisibilityFilterInput(props) {
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
@@ -36897,7 +36900,7 @@ function VisibilityFilterInput(props) {
     }, void 0, false, {
         fileName: "src/components/visibility-filter-input/visibility-filter-input.jsx",
         lineNumber: 9,
-        columnNumber: 5
+        columnNumber: 10
     }, this);
 }
 _c = VisibilityFilterInput;
@@ -36912,7 +36915,7 @@ $RefreshReg$(_c, "VisibilityFilterInput");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","../../actions/actions":"biFwH","./visibility-filter.scss":"6ojMO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6ojMO":[function() {},{}],"cDNB3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","../../actions/actions":"biFwH","./visibility-filter.scss":"6ojMO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-bootstrap/Form":"iBZ80"}],"6ojMO":[function() {},{}],"cDNB3":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "__DO_NOT_USE__ActionTypes", ()=>ActionTypes

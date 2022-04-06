@@ -28,7 +28,7 @@ export function LoginView(props) {
 
   return (
      <Form id="login-view">
-        <Form.Group controlId="formUsername">
+        <Form.Group className="mb-3" controlId="formUsername">
           <Form.Label>Username:</Form.Label>
           <Form.Control type="text" onChange={e => setUsername(e.target.value)} />
         </Form.Group>
@@ -40,7 +40,7 @@ export function LoginView(props) {
       <Button variant="primary" type="button" onClick={handleSubmit}>
         Submit
       </Button>
-        <Link to="/register" className="login-Signup"><Button variant="link" type="button" >Signup</Button></Link>
+        <Link to="/register" className="links"><Button variant="link" type="button" >Signup</Button></Link>
         
      </Form>
     
